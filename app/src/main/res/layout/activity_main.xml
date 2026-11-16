@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?attr/colorSurface"
+    android:importantForAccessibility="yes"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏋️ Спортен дневник"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:gravity="center"
+            android:accessibilityHeading="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Записвай и следи своите тренировки."
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <LinearLayout
+            android:id="@+id/motivationContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/colorSecondaryContainer">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💪 Мотивация за деня"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/motivationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Всяка тренировка е крачка напред!"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/streakContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/colorSecondaryContainer">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔥 Моята активна серия"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:accessibilityHeading="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/currentStreakText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Текуща серия: 0 дни"
+                android:textSize="17sp"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/longestStreakText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Най-дълга серия: 0 дни"
+                android:textSize="17sp"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <!-- Основна статистика -->
+        <LinearLayout
+            android:id="@+id/statisticsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:importantForAccessibility="yes">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 Статистика"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:accessibilityHeading="true"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/totalWorkoutsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Общо тренировки: 0"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/totalDurationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Общо минути: 0"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/totalCaloriesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Изгорени калории: 0"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <!-- Подробна статистика -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/statisticsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Виж подробна статистика"
+            android:minHeight="56dp"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:contentDescription="Отвори подробната статистика на тренировките"
+            android:layout_marginBottom="12dp"
+            app:cornerRadius="16dp" />
+
+        <!-- Календар -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/calendarButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Тренировъчен календар"
+            android:minHeight="56dp"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:contentDescription="Отвори календара на тренировките"
+            android:layout_marginBottom="8dp"
+            app:cornerRadius="16dp" />
+
+        <!-- Цели -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/goalsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎯 Моите цели"
+            android:minHeight="56dp"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:contentDescription="Отвори седмичните тренировъчни цели"
+            android:layout_marginBottom="8dp"
+            app:cornerRadius="16dp" />
+
+        <!-- Постижения -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/achievementsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏆 Постижения и значки"
+            android:minHeight="56dp"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:contentDescription="Отвори отключените и заключените постижения"
+            android:layout_marginBottom="20dp"
+            app:cornerRadius="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reminderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔔 Напомняния за тренировки"
+            android:minHeight="56dp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="16dp"
+            app:cornerRadius="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/profileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👤 Моят профил и настройки"
+            android:minHeight="56dp"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:contentDescription="Отвори профила и настройките"
+            android:layout_marginBottom="16dp"
+            app:cornerRadius="16dp" />
+
+        <!-- CSV експортиране -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/exportWorkoutsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📁 Експортирай тренировките"
+            android:contentDescription="Експортира всички тренировки в CSV файл"
+            android:minHeight="56dp"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="20dp"
+            app:cornerRadius="16dp" />
+
+        <!-- Търсене -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Търси спорт, дата или бележка"
+            android:layout_marginBottom="12dp"
+            app:boxBackgroundMode="outline"
+            app:cornerRadius="12dp"
+            app:startIconDrawable="@android:drawable/ic_menu_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/workoutSearchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionSearch" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Филтър по спорт -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Филтрирай по спорт"
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundMode="outline"
+            app:cornerRadius="12dp">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/sportFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:inputType="none"
+                android:clickable="true"
+                android:focusable="false"
+                android:text="Всички тренировки"
+                android:padding="16dp"
+                android:contentDescription="Избери спорт за филтриране на тренировките" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Съобщение при празен списък -->
+        <TextView
+            android:id="@+id/emptyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Все още нямаш тренировки."
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Списък с тренировки -->
+        <LinearLayout
+            android:id="@+id/workoutsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:importantForAccessibility="yes" />
+
+        <!-- Добавяне на тренировка -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addWorkoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+ Добави тренировка"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:minHeight="56dp"
+            android:contentDescription="Добави нова тренировка"
+            android:layout_marginTop="24dp"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+</ScrollView>
