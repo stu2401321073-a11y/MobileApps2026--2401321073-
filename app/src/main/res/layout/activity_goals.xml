@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:fillViewport="true"
+    android:importantForAccessibility="yes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Моите седмични цели"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:gravity="center"
+            android:padding="16dp"
+            android:accessibilityHeading="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Брой тренировки за седмицата"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface" />
+
+        <EditText
+            android:id="@+id/goalWorkoutsInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="number"
+            android:hint="Например 5"
+            android:contentDescription="Целеви брой тренировки за седмицата"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/workoutsProgressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Тренировки: 0 / 5"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:paddingTop="20dp" />
+
+        <ProgressBar
+            android:id="@+id/workoutsProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:max="5"
+            android:progress="0"
+            android:contentDescription="Напредък към седмичната цел за брой тренировки" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Минути тренировки за седмицата"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:paddingTop="24dp" />
+
+        <EditText
+            android:id="@+id/goalMinutesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="number"
+            android:hint="Например 150"
+            android:contentDescription="Целеви брой минути тренировки за седмицата"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/minutesProgressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Минути: 0 / 150"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:paddingTop="20dp" />
+
+        <ProgressBar
+            android:id="@+id/minutesProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:max="150"
+            android:progress="0"
+            android:contentDescription="Напредък към седмичната цел за минути тренировки" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveGoalsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="Запази целите"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:contentDescription="Запази зададените седмични цели"
+            android:layout_marginTop="28dp"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+</ScrollView>
