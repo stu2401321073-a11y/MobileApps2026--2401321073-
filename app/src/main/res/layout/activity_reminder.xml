@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Напомняния за тренировки"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:accessibilityHeading="true"
+            android:layout_marginBottom="20dp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/reminderSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Включи напомнянията"
+            android:textSize="18sp"
+            android:minHeight="56dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Час за напомняне"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/reminderTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="18:00"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chooseTimeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Избери час"
+            android:minHeight="56dp"
+            android:textAllCaps="false"
+            app:cornerRadius="14dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Избери дни"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/mondayCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Понеделник"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/tuesdayCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Вторник"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/wednesdayCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сряда"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/thursdayCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Четвъртък"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/fridayCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Петък"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/saturdayCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Събота"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/sundayCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Неделя"
+            android:minHeight="48dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveReminderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Запази напомнянията"
+            android:minHeight="56dp"
+            android:textAllCaps="false"
+            android:layout_marginTop="24dp"
+            app:cornerRadius="14dp" />
+
+    </LinearLayout>
+</ScrollView>
