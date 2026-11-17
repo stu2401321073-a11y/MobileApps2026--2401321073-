@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?attr/colorSurface"
+    android:importantForAccessibility="yes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Статистика"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:accessibilityHeading="true"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Твоят тренировъчен напредък"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/statisticsTotalWorkouts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="Общо тренировки: 0"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/statisticsTotalDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="Общо минути: 0"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/statisticsTotalCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="Изгорени калории: 0"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Месечен отчет"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:accessibilityHeading="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/monthlyReportTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Текущ месец"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/monthlyWorkouts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Тренировки: 0"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/monthlyDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Общо минути: 0"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/monthlyCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Изгорени калории: 0"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/previousMonthTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Предходен месец"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/previousMonthWorkouts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Тренировки: 0"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/monthlyComparison"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="Сравнение с предходния месец"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Продължителност през последните 7 дни"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:accessibilityHeading="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏆 Моите лични рекорди"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:accessibilityHeading="true"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/recordLongestWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="⏱ Най-дълга тренировка: 0 мин."
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/recordMostCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="🔥 Най-много калории в тренировка: 0 kcal"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/recordFavoriteSport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="🏃 Най-често практикуван спорт: Няма данни"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/recordBestWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="📅 Най-активна седмица: 0 тренировки"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:padding="12dp" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/workoutBarChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:contentDescription="Стълбовидна графика за продължителността на тренировките през последните седем дни" />
+
+    </LinearLayout>
+</ScrollView>
